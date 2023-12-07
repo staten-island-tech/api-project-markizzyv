@@ -1,7 +1,7 @@
 import './style.css'
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+/* import { setupCounter } from './counter.js'
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -22,3 +22,22 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+ */
+
+const URL = `https://api.trakt.tv`;   
+
+async function getData(URL){
+    try {
+      const response = await fetch(URL);
+
+      console.log(response);
+      const data = await response.json();
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+   
+    }
+}
+getData(URL);
+
+//https://api.trakt.tv
