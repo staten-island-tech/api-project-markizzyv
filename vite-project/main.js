@@ -39,6 +39,6 @@ async function getData(URL){
 }
 getData(URL);
 
-//https://api.trakt.tv
-//https://api.tvmaze.com 
+
+
 //https://api.themoviedb.org/api_key=26906062d4fd4de4f857063554f6f6d3
