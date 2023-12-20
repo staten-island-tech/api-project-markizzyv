@@ -40,6 +40,10 @@ async function getData(URL){
 }
 getData(URL);
 
+DOMSelectors.form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+});
 
 
 

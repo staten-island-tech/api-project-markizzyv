@@ -2,7 +2,7 @@ html,
 body,
 * {
    text-align: center;
-    margin: 250px;   
+      
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,23 +10,33 @@ body,
   }  
 
 :root {
+  
   --light-blue: #2998ff;
-
   --h1: 7.594rem;
+
 }
 
+form{
+
+  text-align: center;
+  margin: 250px; 
+
+  
+}
 
 input {
   padding: 5px 10px;
   text-align: center;
   justify-content: space-between;
-  
+  font-size: 15px;
+  justify-content: space-between;
   
 
 }
 
 h1{
   font-size: var(--h1);
+  font-family: 'Fugaz One', sans-serif;
 }
 
 
