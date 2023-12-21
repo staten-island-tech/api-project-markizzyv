@@ -3,7 +3,6 @@ import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 
 
-
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4f857063554f6f6d3&page=1`;   
 
 async function getData(URL){
@@ -27,13 +26,8 @@ getData(URL);
 
 searchData(URL)
  */
-
-DOMSelectors.form.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  
-});
-
+DOMSelectors.form.addEventListener("submit", (event) => 
+event.preventDefault());
 
 
 

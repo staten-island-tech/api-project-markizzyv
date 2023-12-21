@@ -12,6 +12,7 @@ body,
 :root {
   
   --light-purp: #d5acec;
+  --lighter-purp: #ebccfd;
   --h1: 7.594rem;
 
 }
@@ -45,6 +46,13 @@ h1{
 
 }
 
+.search-btn{
+  border-radius: 25px;
+  box-shadow: 5px 5px 1px;
+  background-color: var(--lighter-purp);
+  font
+
+}
 
 
  
