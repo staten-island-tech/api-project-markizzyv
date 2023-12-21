@@ -11,7 +11,7 @@ body,
 
 :root {
   
-  --light-blue: #2998ff;
+  --light-purp: #d5acec;
   --h1: 7.594rem;
 
 }
@@ -41,7 +41,7 @@ h1{
 
 
 .toppage{
-  background-color: var(--light-blue);
+  background-color: var(--light-purp);
 
 }
 
