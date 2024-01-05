@@ -1,4 +1,6 @@
-import './style.css'
+import './style.css';
+
+
 import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 
@@ -26,8 +28,26 @@ getData(URL);
 
 searchData(URL)
  */
-DOMSelectors.form.addEventListener("submit", (event) => 
+
+document.querySelector(".main").addEventListener("submit", (event) => 
 event.preventDefault());
+
+function addMovie(arr){ 
+  arr.forEach((results)=> document.querySelector(".flex-container").insertAdjacentHTML("beforebegin",
+ 
+  `<div class="card">
+   <h1 class ="movietitle">${results.original_title}<h1>
+   <h2 class ="movieimg">${results.poster_path}</h2>
+   <p class ="moviedesc">${results.overview}</p>
+   <h3 class ="moviedate">${results.release_date}</h3>
+  </div>`
+
+));
+};
+
+
+
+
 
 
 

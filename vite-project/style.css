@@ -2,7 +2,6 @@ html,
 body,
 * {
    text-align: center;
-      
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,14 +44,8 @@ h1{
   background-color: var(--light-purp);
 
 }
-
-.search-btn{
+ .search-btn{
   border-radius: 25px;
   box-shadow: 5px 5px 1px;
   background-color: var(--lighter-purp);
-  font
-
-}
-
-
- 
+ }
