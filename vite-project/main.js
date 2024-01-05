@@ -1,8 +1,26 @@
 import './style.css';
+import { DOMSelectors } from './dom.js';
 
 
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
+DOMSelectors.form.addEventListener("submit", function(event){
+  event.preventDefault();
+  var ser = 
+  
+  // const search = api.themoviedb.org/api_key=`${ser}`
+
+  
+function addMovie (arr){ 
+  arr.forEach((results)=> document.querySelector(".flex-container").insertAdjacentHTML("beforebegin",
+ 
+  `<div class="card">
+   <h1 class ="movietitle">${results.original_title}<h1>
+   <h2 class ="movieimg">${results.poster_path}</h2>
+   <p class ="moviedesc">${results.overview}</p>
+   <h3 class ="moviedate">${results.release_date}</h3>
+  </div>`
+
+));
+};
 
 
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4f857063554f6f6d3&page=1`;   
@@ -21,7 +39,7 @@ async function getData(URL){
 }
 
 getData(URL);
-
+});
 /* async function searchData(URL){
 
 };
@@ -29,21 +47,9 @@ getData(URL);
 searchData(URL)
  */
 
-document.querySelector(".main").addEventListener("submit", (event) => 
-event.preventDefault());
+//const ser = (link)=${shit}
 
-function addMovie(arr){ 
-  arr.forEach((results)=> document.querySelector(".flex-container").insertAdjacentHTML("beforebegin",
- 
-  `<div class="card">
-   <h1 class ="movietitle">${results.original_title}<h1>
-   <h2 class ="movieimg">${results.poster_path}</h2>
-   <p class ="moviedesc">${results.overview}</p>
-   <h3 class ="moviedate">${results.release_date}</h3>
-  </div>`
 
-));
-};
 
 
 
