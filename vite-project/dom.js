@@ -1,5 +1,5 @@
 const DOMSelectors = {
-    searchBar: document.querySelector(".search-btn"),
+    searchBar: document.querySelector(".search-Bar"),
     form: document.querySelector("#form")
 }
 

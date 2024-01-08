@@ -4,12 +4,11 @@ import { DOMSelectors } from './dom.js';
 
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
-  var ser = 
+  var movSearch = DOMSelectors.searchBar.value
+  console.log(movSearch)
+ const search = `https://api.themoviedb.org/api_key=${movSearch}`
   
-  // const search = api.themoviedb.org/api_key=`${ser}`
-
-  
-function addMovie (arr){ 
+function addMovie (){ 
   arr.forEach((results)=> document.querySelector(".flex-container").insertAdjacentHTML("beforebegin",
  
   `<div class="card">
@@ -22,6 +21,7 @@ function addMovie (arr){
 ));
 };
 
+addMovie(search);
 
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4f857063554f6f6d3&page=1`;   
 
