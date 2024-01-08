@@ -6,8 +6,8 @@ DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
   var movSearch = DOMSelectors.searchBar.value
   console.log(movSearch)
- const search = `https://api.themoviedb.org/api_key=${movSearch}`
-  
+  const search = `https://api.themoviedb.org/api_key=${movSearch}`
+   
 function addMovie (){ 
   arr.forEach((results)=> document.querySelector(".flex-container").insertAdjacentHTML("beforebegin",
  
@@ -21,7 +21,7 @@ function addMovie (){
 ));
 };
 
-addMovie(search);
+addMovie(search) ;
 
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4f857063554f6f6d3&page=1`;   
 
@@ -37,6 +37,7 @@ async function getData(URL){
    
     }
 }
+
 
 getData(URL);
 });
