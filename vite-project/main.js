@@ -16,7 +16,7 @@ const main = document.getElementById(".main");
     }
     console.log(response);
     const data = await response.json();
-    console.log(data);
+    cons ole.log(data);
     addMovie(data);
     if (data.length === 0){
       document.querySelector(".Error").textContent = "Error";
