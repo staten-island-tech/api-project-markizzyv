@@ -6,7 +6,27 @@ const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4
 // const API_URL = BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY
 const main = document.getElementById(".main");
 
+async function getData(URL){
+  try {
+    const response = await fetch(URL);
+    if (response.status !=200) {
+      throw new Error(response.statusText);
+    }
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
 
+    if (data.length === 0) {
+      document.querySelector(".Error").textContent = "Error"
+      document.querySelector(".flex-container").textContent = "";
+    }
+  } catch (error) {
+    document.querySelector(".error-message").textContent = "Error: Unable to fetch data";
+  }
+ 
+}
+
+getData(URL)
 
 /* async function getMovData(searchURL){
   try{
