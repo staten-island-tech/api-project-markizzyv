@@ -11,19 +11,23 @@
     <title>TMDB API</title>
   </head>
   <body>
-    <div class="main">
 
 
     <h1 class="toppage">TMDB Movie API!</h1>
 
 
     <form action="" id="form">
-    <input type ="search" name="SearchBar" class="search-Bar">
-    <button id="search-btn"></button>
-    
+    <label for="search"></label>
+    <input type ="text" name="SearchBar" id="search-Bar" >
+    <input type="submit" value="Search" class="search-btn" id="submit"/>
+
+  <div id="main">
+
+    <div class="flex-container"></div>
+
   </div>
 
-  <div class="flex-container"></div>
+
 
 
     <script type="module" src="./main.js"></script>

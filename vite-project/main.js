@@ -3,7 +3,81 @@ import { DOMSelectors } from './dom.js';
 
 
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4f857063554f6f6d3&page=1`;  
+ 
 
+DOMSelectors.form.addEventListener("submit", function(event){
+  event.preventDefault();
+
+
+
+
+});
+
+
+function insertMov (data){
+
+
+
+
+  data.forEach(cardData=> {
+    const {title, poster_path, overview} = cardData;
+    document.querySelector(".flex-container").insertAdjacentHTML(afterbegin,
+  //h1 class diff
+  `
+  <div class= "card">
+  <h1 class ="movTitle">${title}</h1>  
+  <img src = "https://image.tmdb.org/t/p/w500${poster_path}" class ="movImg">
+  <p class ="movOverview">${overview}</p>
+  </div>
+  `
+
+
+    )
+
+
+  }
+  )
+}
+  insertMov(data.results)
+
+
+
+//logging in
+async function getData(URL){
+  try {
+    const response = await fetch(URL);
+    console.log(response);
+    const data = await response.json();
+    console.log(data);
+
+  } catch (error) {
+    console.log(error);
+ 
+  }
+}
+getData(URL);
+
+
+DOMSelectors.form.addEventListener("submit", function(event){
+  event.preventDefault();
+
+
+});
+
+
+
+  //font for h3, and p 
+
+
+ 
+
+
+
+
+
+
+
+/* 
 
 function Insert(secondarr){
   secondarr.forEach((results)=> {
@@ -95,30 +169,10 @@ getMovData(searchURL)
 
 });
 
-/* async function getMovData(searchURL){
-  try{
-    const response = await fetch(searchURL);
-    if (response.status !=200) {
-      throw new Error(response.statusText);
-    }
-    console.log(response);
-    const data = await response.json();
-    cons ole.log(data);
-    addMovie(data);
-    if (data.length === 0){
-      document.querySelector(".Error").textContent = "Error";
-      document.querySelector(".flex-container").innerHTML = "";
+ 
+ */
 
-    } else {
-      document.querySelector(".Error").textContent = "";
 
-    }
-  } catch (error){
-       document.querySelector(".Error").textContent = "Error";
-  }
-}
-getMovData(searchURL)
-*/
 
  
 
