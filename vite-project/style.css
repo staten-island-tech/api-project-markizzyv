@@ -52,10 +52,7 @@ h1{
  }
 
 .flex-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+
 }
 
 
@@ -82,4 +79,8 @@ h1{
 
  .movImg{
   width: 65%;
+  border-radius: 25px;
+  margin: 40px 60px;
  }
+
+ 
