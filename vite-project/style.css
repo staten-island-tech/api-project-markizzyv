@@ -9,7 +9,8 @@ body,
   }  
 
 :root {
-  
+  --light-blue: lightskyblue;
+  --lighter-blue: lightblue;
   --light-purp: #d5acec;
   --lighter-purp: #ebccfd;
   --h1: 7.594rem;
@@ -49,3 +50,37 @@ h1{
   box-shadow: 5px 5px 1px;
   background-color: var(--lighter-purp);
  }
+
+.flex-container{
+
+}
+
+
+ .card{
+  align-items: center;
+  box-shadow: 10px 10px 6px 7px var(--light-blue);
+  justify-content: space-between;
+  background-color: var(--lighter-blue);
+  border-radius: 25px;
+  margin: 40px 60px;
+  flex-direction: column;
+  display: flex;
+ }
+
+ p{
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
+ .movTitle{
+  font-size: 30px;
+ }
+
+ .movImg{
+  width: 65%;
+  border-radius: 25px;
+  margin: 40px 60px;
+ }
+
+ 
