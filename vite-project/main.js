@@ -9,7 +9,7 @@ import { DOMSelectors } from './dom.js';
 
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4f857063554f6f6d3&page=1`;
 
-//insert display cards first
+//insert display cards
 function movInsert(arr) {
 
 document.querySelector(".flex-container").innerHTML = '';

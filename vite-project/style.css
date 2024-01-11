@@ -70,6 +70,12 @@ h1{
   display: flex;
  }
 
+ p{
+  font-size: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
  .movTitle{
   font-size: 30px;
  }
