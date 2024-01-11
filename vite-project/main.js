@@ -3,66 +3,84 @@ import { DOMSelectors } from './dom.js';
 
 
 const URL = `https://api.themoviedb.org/3/movie/popular?api_key=26906062d4fd4de4f857063554f6f6d3&page=1`;  
- 
-
-DOMSelectors.form.addEventListener("submit", function(event){
-  event.preventDefault();
-
-
-
-
-});
-
-
-function insertMov (data){
-
-
-
-
-  data.forEach(cardData=> {
-    const {title, poster_path, overview} = cardData;
-    document.querySelector(".flex-container").insertAdjacentHTML(afterbegin,
-  //h1 class diff
-  `
-  <div class= "card">
-  <h1 class ="movTitle">${title}</h1>  
-  <img src = "https://image.tmdb.org/t/p/w500${poster_path}" class ="movImg">
-  <p class ="movOverview">${overview}</p>
-  </div>
-  `
-
-
-    )
-
-
-  }
-  )
-}
-  insertMov(data.results)
-
-
-
-//logging in
 async function getData(URL){
   try {
     const response = await fetch(URL);
     console.log(response);
     const data = await response.json();
     console.log(data);
+    return data;
+    iinsertMov(data)
 
   } catch (error) {
     console.log(error);
  
   }
 }
-getData(URL);
+getData(URL)
+
+
+
+function iinsertMov (arr){
+
+arr.forEach((results)=> {
+    document.querySelector(".flex-container").insertAdjacentHTML(afterbegin,
+
+  `
+  <div class= "card">
+  <h2 class ="movTitle">${results.title}</h2>  
+  <img src = "https://image.tmdb.org/t/p/w500${results.poster_path}" class ="movImg">
+  <p class ="movOverview">${results.overview}</p>
+  </div>
+  `
+
+    )
+  }
+  )
+}
+  
 
 
 DOMSelectors.form.addEventListener("submit", function(event){
   event.preventDefault();
 
 
+
+
 });
+
+ function insertMov (arr){
+
+  data.forEach((results)=> {
+    document.querySelector(".flex-container").insertAdjacentHTML(afterbegin,
+
+  `
+  <div class= "card">
+  <h2 class ="movTitle">${results.title}</h2>  
+  <img src = "https://image.tmdb.org/t/p/w500${results.poster_path}" class ="movImg">
+  <p class ="movOverview">${results.overview}</p>
+  </div>
+  `
+
+    )
+  }
+  )
+}
+
+insertMov();  
+
+
+
+
+
+
+
+
+
+
+//logging in
+
+
 
 
 
