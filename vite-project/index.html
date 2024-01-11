@@ -8,23 +8,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Frank+Ruhl+Libre:wght@500&family=Fugaz+One&family=Secular+One&family=Signika+Negative:wght@500&display=swap" rel="stylesheet">
     
-    <title>TMDB API</title>
+    <title>Movie API</title>
   </head>
   <body>
 
 
-    <h1 class="toppage">TMDB Movie API!</h1>
+    <h1 class="toppage">Movie API Database!</h1>
 
 
     <form action="" id="form">
-    <label for="search"></label>
-    <input type ="text" name="SearchBar" id="search-Bar" >
-    <input type="submit" value="Search" class="search-btn" id="submit"/>
+    <input type ="text" class="search-Bar" placeholder ="Search for Movies">
+    <button type="submit" class="search-btn">Search</button>
 
-  <div id="main">
+
 
     <div class="flex-container"></div>
-
+    <div class ="error"></div>
   </div>
 
 
