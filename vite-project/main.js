@@ -60,9 +60,8 @@ async function getData(URL) {
 
 DOMSelectors.form.addEventListener("submit", function (event) {
   event.preventDefault();
- 
   document.querySelector(".flex-container").innerHTML = "";
-  const movSearch = DOMSelectors.searchBar.value; //no brackets
+  var movSearch = `${DOMSelectors.searchBar.value}`
   const searchURL = `https://api.themoviedb.org/3/search/movie?api_key=26906062d4fd4de4f857063554f6f6d3&query=${movSearch}`;
   movgetData(searchURL);
 });
@@ -72,13 +71,9 @@ DOMSelectors.form.addEventListener("submit", function (event) {
 async function movgetData(searchURL) {
   try {
     const response = await fetch(searchURL);
-
-
     if (response.status !=200) {
       throw new Error(response.statusText);
     }
-
-
     console.log(response);
     const data = await response.json();
     console.log(data)
